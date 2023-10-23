@@ -1,7 +1,7 @@
 function calc_pi()
 
 %število naključnih točk
-numPoints = 1000; % Začnemo s številom točk 1000
+numPoints = 1000; %začetno št točk
 
 %pravilna vrednost števila π
 truePi = pi;
@@ -13,7 +13,7 @@ estimatedPi = 0;
 e = 0;
 
 %anonimna funkcijo za izračun točk na krožnici
-arcCircle = @(numPoints) [cos(linspace(0, pi, numPoints)); sin(linspace(0, pi, numPoints))];
+arcCircle = @(numPoints) [cos(linspace(0, 2*pi, numPoints)); sin(linspace(0, 2*pi, numPoints))];
 
 %loop za povečevanje števila točk
 for i = 1:5
@@ -24,7 +24,7 @@ for i = 1:5
     arcPoints = arcCircle(numPoints);
 
     % Izračunamo približno vrednost π z novo funkcijo area_pi
-    [estimatedPi, e] = area_pi(circlePoints, squarePoints, arcPoints);
+    [estimatedPi, e] = area_pi(circlePoints, squarePoints);
 
     %display rezultatov da preverimo
     disp(['Število točk: ', num2str(numPoints)]);
