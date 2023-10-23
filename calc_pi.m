@@ -42,10 +42,10 @@ for i = 1:5
     scatter(squarePoints(1, :), squarePoints(2, :), 'b', 'filled'); % Točke zunaj krožnice
     plot(arcPoints(1, :), arcPoints(2, :), 'k', 'LineWidth', 2); % Lok krožnice
     axis equal;
-    title([' ', num2str(numPoints)]);
+    title(['Aproksimacija pi ', num2str(numPoints)]);
     legend('Točke znotraj kroga', 'Točke v kvadratu - zunaj kroga', 'Krožnica');
-    xlabel('');
-    ylabel('');
+    xlabel('X os');
+    ylabel('Y os');
 end
 
 end
